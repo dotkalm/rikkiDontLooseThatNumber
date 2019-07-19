@@ -1,5 +1,5 @@
 module.exports = { 
     showNew: (req, res) => {
-        res.send('Mr. Fagen I presume')
+        res.render('new.ejs')
     }
 }
