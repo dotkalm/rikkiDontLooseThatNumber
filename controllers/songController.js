@@ -7,7 +7,9 @@ const songController = {
             if(err) {
                 res.send(err)
             } else {
-                res.send(allSongs)
+                res.render('index.ejs', {
+                    allSongs: allSongs
+                })
             }
         }
     )},
