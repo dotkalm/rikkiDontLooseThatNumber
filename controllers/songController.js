@@ -13,6 +13,17 @@ const songController = {
             }
         }
     )},
+    show:(req,res)=>{
+        Songs.findById(req.params.id, (err,song) =>{
+            if(err){
+                res.send(err);
+            } else {
+                res.render('show.ejs', {
+                    song: song
+                })
+            }
+        })
+    },
     showNew: (req,res) => {
         res.render('new.ejs');
     },

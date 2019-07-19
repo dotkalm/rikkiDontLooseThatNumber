@@ -7,12 +7,13 @@
     </head>
     <body>
         <h1>Steely Dan Songs</h1>
-        <ul>
+        <dl>
             <%for(let i=0;i<allSongs.length;i++){%>
-                <li>
-                <%=allSongs[i].name%>
-                </li>
+                <dt>
+                Title: <a href="/rikkiDontLooseThatNumber/<%=allSongs[i]._id%>"><%=allSongs[i].name%></a></dt>
+                <dd>Length: <%=allSongs[i].length%></dd>
+                <dd>Studio Musicians:<%=allSongs[i].studioMusicians%></dd>
             <%}%>
-        </ul>
+        </dl>
     </body>
 </html>
