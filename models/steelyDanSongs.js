@@ -10,5 +10,5 @@ const songSchema = new mongoose.Schema({
 
 const Songs = mongoose.model('Song', songSchema);
 
-module.export = Songs;
+module.exports = Songs;
 

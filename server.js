@@ -6,7 +6,7 @@ const songRoutes = require('./routes/songRoutes')
 require('./db/db')
 
 app.use(express.json());
-app.use(express.urlencoded())
+app.use(express.urlencoded({extended:true}))
 app.use('/rikkiDontLooseThatNumber', songRoutes);
 
 app.listen(3000, () => {
