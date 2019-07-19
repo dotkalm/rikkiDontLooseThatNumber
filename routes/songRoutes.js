@@ -3,6 +3,6 @@ const router = express.Router();
 const songController = require('../controllers/songController')
 
 router.get('/new', songController.showNew);
-router.post('/', (req,res)=>console.log(req.body));
+router.post('/', songController.create);
 
 module.exports = router;
